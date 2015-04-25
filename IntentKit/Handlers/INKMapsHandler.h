@@ -60,4 +60,6 @@ typedef NS_ENUM(NSInteger, INKMapsHandlerDirectionsMode) {
  @see directionsFrom:to:mode: */
 - (INKActivityPresenter *)directionsFrom:(NSString *)from to:(NSString *)to;
 
+- (INKActivityPresenter *)directionsToName:(NSString *)name latitude:(double)latitude longitude:(double)longitude;
+
 @end

@@ -28,8 +28,9 @@ Pod::Spec.new do |s|
 
   s.subspec 'Maps' do |ss|
     ss.dependency 'IntentKit/Core'
-    ss.source_files = 'IntentKit/Handlers/INKMapsHandler.{h,m}'
-    ss.resource_bundles = { 'IntentKit-INKMapsHandler' => "IntentKit/Apps/{Maps,Google Maps,Waze}/*.{plist,png}" }
+    ss.source_files = 'IntentKit/Handlers/INKMapsHandler.{h,m}', 'IntentKit/Apps/INKMaps/*.{h,m}'
+    ss.resource_bundles = { 'IntentKit-INKMapsHandler' => "IntentKit/Apps/{Maps,INKMaps,Google Maps,Waze}/*.{plist,png}" }
+    ss.framework = "MapKit"
     ss.requires_arc = true
   end
 

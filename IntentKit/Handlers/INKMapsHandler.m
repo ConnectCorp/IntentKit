@@ -56,6 +56,16 @@
     return [self directionsFrom:from to:to mode:INKMapsHandlerDirectionsModeDriving];
 }
 
+- (INKActivityPresenter *)directionsToName:(NSString *)name latitude:(double)latitude longitude:(double)longitude {
+    NSString *command = NSStringFromSelector(_cmd);
+    NSDictionary *args = [self argsDictionaryWithDictionary:
+                          @{@"name": name,
+                            @"latitude": [NSString stringWithFormat:@"%f", latitude],
+                            @"longitude": [NSString stringWithFormat:@"%f", longitude]}];
+    
+    return [self performCommand:command withArguments:args];
+}
+
 #pragma mark - Private methods
 - (NSDictionary *)argsDictionaryWithDictionary:(NSDictionary *)args {
     NSMutableDictionary *newArgs = [args mutableCopy];

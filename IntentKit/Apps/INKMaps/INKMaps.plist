@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>className</key>
+	<string>INKMaps</string>
+	<key>name</key>
+	<dict>
+		<key>en</key>
+		<string>Maps</string>
+		<key>de</key>
+		<string>Karten</string>
+		<key>fr</key>
+		<string>Plans</string>
+		<key>nl</key>
+		<string>Kaarten</string>
+	</dict>
+	<key>actions</key>
+	<array>
+		<string>directionsToName:latitude:longitude:</string>
+	</array>
+</dict>
+</plist>
